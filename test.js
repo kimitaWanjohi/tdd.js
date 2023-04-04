@@ -1,4 +1,6 @@
-const stringLength = require('./app.js');
+const { stringLength, reverseString } = require('./app.js');
+
+console.log(stringLength('hello'));
 
 describe('stringLength', () => {
     test('returns the length of a string', () => {
@@ -16,5 +18,16 @@ describe('stringLength', () => {
         const result = () => stringLength(arg);
         // assert
         expect(result).toThrow();
+    });
+});
+
+describe('reverseString', () => {
+    test('reverses a string', () => {
+        // arrange
+        const arg = 'hello';
+        // act
+        const result = reverseString(arg);
+        // assert
+        expect(result).toBe('olleh');
     });
 });
