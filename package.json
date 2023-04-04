@@ -4,6 +4,9 @@
   "main": "index.js",
   "author": "kimitawanjohi <kimitawanjohi7923@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "test": "jest"
+  },
   "devDependencies": {
     "jest": "^29.5.0"
   }
