@@ -1,4 +1,4 @@
-const { stringLength, reverseString } = require('./app.js');
+const { stringLength, reverseString, capitalize } = require('./app.js');
 const Calculator = require('./calc.js');
 
 console.log(stringLength('hello'));
@@ -71,5 +71,16 @@ describe('Calculator', () => {
         calc.divide(arg);
         // assert
         expect(calc.value).toBe(0);
+    });
+});
+
+describe('Capitalize', () => {
+    test('capitalizes the first letter of a string', () => {
+        // arrange
+        const arg = 'hello';
+        // act
+        const result = capitalize(arg);
+        // assert
+        expect(result).toBe('Hello');
     });
 });
