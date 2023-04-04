@@ -15,3 +15,5 @@ class Calculator {
     this.value /= number;
   }
 }
+
+module.exports = Calculator;

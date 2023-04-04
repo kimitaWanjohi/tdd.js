@@ -1,4 +1,5 @@
 const { stringLength, reverseString } = require('./app.js');
+const Calculator = require('./calc.js');
 
 console.log(stringLength('hello'));
 
@@ -29,5 +30,46 @@ describe('reverseString', () => {
         const result = reverseString(arg);
         // assert
         expect(result).toBe('olleh');
+    });
+});
+
+// test calc add
+
+describe('Calculator', () => {
+    let calc;
+    beforeEach(() => {
+        calc = new Calculator();
+    });
+    test('add', () => {
+        // arrange
+        const arg = 5;
+        // act
+        calc.add(arg);
+        // assert
+        expect(calc.value).toBe(5);
+    });
+    test('subtract', () => {
+        // arrange
+        const arg = 5;
+        // act
+        calc.subtract(arg);
+        // assert
+        expect(calc.value).toBe(-5);
+    });
+    test('multiply', () => {
+        // arrange
+        const arg = 5;
+        // act
+        calc.multiply(arg);
+        // assert
+        expect(calc.value).toBe(0);
+    });
+    test('divide', () => {
+        // arrange
+        const arg = 5;
+        // act
+        calc.divide(arg);
+        // assert
+        expect(calc.value).toBe(0);
     });
 });
